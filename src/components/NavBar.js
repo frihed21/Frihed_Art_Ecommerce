@@ -1,6 +1,6 @@
-import "./Navigation.css";
+import "./NavBar.css";
 
-const Navigation = () => {
+const NavBar = () => {
     return (     
         
         <nav class="header__container2">           
@@ -35,4 +35,4 @@ const Navigation = () => {
     )
 };
 
-export default Navigation;
+export default NavBar;
