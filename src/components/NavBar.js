@@ -1,6 +1,8 @@
 import "./NavBar.css";
+import "../components/CartWidget/CartWidget";
 
 const NavBar = () => {
+    
     return (     
         
         <nav class="header__container2">           

@@ -1,0 +1,19 @@
+.Header {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	width: 100%;
+	min-height: 30vh;
+	border: 1px solid #ae905c;
+}
+
+.Header h1,
+h2 {
+	color: black;
+}
+
+.Header img {
+	width: 105px;
+}
