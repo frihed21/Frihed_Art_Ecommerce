@@ -1,9 +1,16 @@
-.footer{
-    letter-spacing: 0.1rem;    
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 100%;   
+    min-height: 30vh;
+    border: 1px solid #ae905c;
 }
 .footer__title{
+        font-size: 1rem;
         color: #ae905c;
-        font-size: 1.3rem;
     }
 .footer__subtitle{
         color: #978888;
@@ -21,16 +28,18 @@
 .footer__a{
         text-decoration: none;
         color:#818181;
+        font-size: 1rem;
     }
     .footer__bg{
         background-color:#eeeeee;
     }
     .footer__last{
+        width: 100%;
         background-color:#303030;
     }    
     .footer__svg{
-        width: 2rem;
-        height:2rem;
+        width: 1rem;
+        height:1rem;
         color: #ae905c;
     }
     .footer__svg:hover{
@@ -44,6 +53,5 @@
     }
     
     .footer__textlast{
-        font-size: 1.3rem;
         text-align: center;
     }
