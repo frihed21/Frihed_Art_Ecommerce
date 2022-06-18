@@ -5,7 +5,7 @@ import './ItemListContainer.css';
 const ItemListContainer = (props) => {
 
 	const onAdd = (quantity) => {
-		console.log ('Compraste ${quantity} unidades');
+		console.log (`felicitaciones se agregaron ${n} productos al carrito`);
 	}
 
 	return (
