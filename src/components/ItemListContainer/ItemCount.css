@@ -1,0 +1,10 @@
+.counter{
+    color: black;
+    justify-content: center; 
+    vertical-align: middle;
+    position: sticky;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+

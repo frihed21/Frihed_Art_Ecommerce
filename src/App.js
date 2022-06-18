@@ -7,11 +7,13 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Header from './components/Header/Header';
 import CardWidget from './components/CardWidget/CardWidget';
+import ItemCount from './components/ItemListContainer/ItemCount';
 import Footer from './components/Footer/Footer';
 
 
 const title = 'FRIHED ART';
-const App = () => {
+const App = () => {	
+	
 	const [name, setName] = useState('Lucía');
 	const [counter, setcounter] = useState(0);
 
@@ -31,11 +33,11 @@ const App = () => {
 return (
 		<div className='App'>
 			<NavBar />
-			<ItemListContainer greeting='Bienvenido a mi tienda'/>
 			<Header title={title} subtitle='Katerin Morales' />
+			<ItemListContainer greeting= 'Bienvenido a mi tienda'/>			
 			<p>User Name: {name}</p>			
 			<button onClick={handlerUpdateName}>Actualizar Nombre</button>
-			<div className='UserSection'>
+				<div className='UserSection'>
 					<CardWidget
 						name='Woman In Aqua'
 						price='s/ 120.00'
