@@ -1,5 +1,5 @@
 import './NavBar.css';
-import '../components/CardWidget/CardWidget';
+import '../CardWidget/CardWidget';
 
 const NavBar = (props) => {
 	console.log(props);

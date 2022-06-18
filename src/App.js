@@ -3,7 +3,8 @@ import './App.css';
 
 
 // Components
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Header from './components/Header/Header';
 import CardWidget from './components/CardWidget/CardWidget';
 import Footer from './components/Footer/Footer';
@@ -30,9 +31,9 @@ const App = () => {
 return (
 		<div className='App'>
 			<NavBar />
+			<ItemListContainer greeting='Bienvenido a mi tienda'/>
 			<Header title={title} subtitle='Katerin Morales' />
-			<p>User Name: {name}</p>
-
+			<p>User Name: {name}</p>			
 			<button onClick={handlerUpdateName}>Actualizar Nombre</button>
 			<div className='UserSection'>
 					<CardWidget
