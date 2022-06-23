@@ -5,25 +5,28 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-const CardWidget = ({ img, name, price, description }) => {
+export default function CardWidget ({ items }) {
 	return (
-		<Card sx={{ maxWidth: 345 }}>
+		<Card sx={{ maxWidth: 245, margin: 10  }}>
 			<CardActionArea>
-				<CardMedia component='img' image={img} alt='products' />
+				<CardMedia 
+					component='img'
+					height = '120'
+					image={items.url}
+					alt='products'
+				 />
 				<CardContent>
 					<Typography gutterBottom variant='h5' component='div'>
-						{name}
+						{items.albumId}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						{price}
+						{items.id}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						{description}
+						{items.title}
 					</Typography>
 				</CardContent>
 			</CardActionArea>
 		</Card>
 	);
-};
-
-export default CardWidget;
+}

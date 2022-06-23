@@ -4,10 +4,11 @@ import './ItemListContainer.css';
 
 const ItemListContainer = (props) => {
 
-	const onAdd = (quantity) => {
+	const onAdd = (n) => {
 		console.log (`felicitaciones se agregaron ${n} productos al carrito`);
 	}
 
+	
 	return (
 		<div className='ItemListContainer'>
 			<h1>{props.greeting}</h1>
