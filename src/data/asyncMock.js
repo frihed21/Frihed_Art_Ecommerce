@@ -2,7 +2,7 @@ export const listadoProdutos=[
 	{	id:1,
 		category:"pinturas",
 		content:"",
-		description:"PINTURA ACRILICO ESTILO ANTIGUO CIELO ESTRELLADO 50X70 CM",		
+		description:"PINTURA ACRILICO ESTILO ANTIGUO CIELO ESTRELLADO 60X80 CM",		
         img:"https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2022/03/16/16474297505881.jpg",		
         name:"Cielo Estrellado",
 		price:129,
