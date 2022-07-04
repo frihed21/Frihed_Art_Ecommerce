@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { traerProducto } from "../../data/asyncMock"
-import { ItemDetail } from "../ItemDetail/ItemDetail"
+import { getProducts } from "../../data/asyncMock"
+import ItemDetail  from "../ItemDetail/ItemDetail"
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = (product) => {
 
     const [item, setItem] = useState([])
     const [loading, setLoading] = useState(true)
@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     const id = 2
 
     useEffect(() => {
-        traerProducto()
+        getProducts()
             .then((res) => {
                 setItem(res)
                 setLoading(false)
