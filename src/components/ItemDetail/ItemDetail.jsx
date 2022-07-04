@@ -1,4 +1,6 @@
 
+import ItemCount from "../ItemListContainer/ItemCount"
+
 export const ItemDetail = ({ img, name, description }) => {
     return (
         <div className="fondo">
