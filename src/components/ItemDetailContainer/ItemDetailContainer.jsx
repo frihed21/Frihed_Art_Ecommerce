@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import { getProductById } from "../../data/asyncMock"
+import { traerProducto } from "../../data/asyncMock"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 
-export const ItemDetailContainer = () => {
+const ItemDetailContainer = () => {
 
     const [item, setItem] = useState([])
     const [loading, setLoading] = useState(true)
@@ -10,26 +10,18 @@ export const ItemDetailContainer = () => {
     const id = 2
 
     useEffect(() => {
-        getProductById(id)
-            .then(res => {
+        traerProducto()
+            .then((res) => {
                 setItem(res)
                 setLoading(false)
-            }
-            )
-            .catch(err => console.log(err))
-    }, [])
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+         }, []);
 
-    console.log("item:", item)
+//console.log(product);
+return <ItemDetail product={product} />;
+};
 
-    return (
-        <>
-            <br />
-            <br /><br /><br />
-            <h1>ITEM DETAIL: </h1>
-            <hr />
-            {loading ? <div>Cargando...</div>
-                : <ItemDetail img={item.img} name={item.name} description={item.description} />
-            }
-        </>
-    )
-}
+export default ItemDetailContainer;

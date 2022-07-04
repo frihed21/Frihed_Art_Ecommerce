@@ -1,4 +1,4 @@
-export const listadoProdutos=[
+export const listadoProductos=[
 	{	id:1,
 		category:"pinturas",
 		content:"",
@@ -58,8 +58,8 @@ export const listadoProdutos=[
 export const getProducts = (categoria) =>{
     return new Promise ((resolve,reject) => {
         setTimeout(() => {
-            if(listadoProdutos.length>0){
-                resolve(listadoProdutos.filter(unProducto => unProducto.category === categoria))}
+            if(listadoProductos.length>0){
+                resolve(listadoProductos.filter(unProducto => unProducto.category === categoria))}
             else{
                 reject("Sin datos")
             } 
@@ -70,8 +70,8 @@ export const getProducts = (categoria) =>{
 export const getProductById = (id) =>{
     return new Promise ((resolve,reject) => {
         setTimeout(() => {
-            if(listadoProdutos.length>0){
-                resolve(listadoProdutos.find(unProducto => unProducto.id === parseInt(id)))}
+            if(listadoProductos.length>0){
+                resolve(listadoProductos.find(unProducto => unProducto.id === parseInt(id)))}
             else{
                 reject("Sin datos")
             } 
