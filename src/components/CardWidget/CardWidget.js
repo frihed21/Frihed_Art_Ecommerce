@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import CartContext from '../../Context/UseContext';
 
-export default function CardWidget ({ items}) {
+export default function CardWidget ({items}) {
 	const {items} = React.useContext(CartContext)
 	let itemsInCart = 0;
 
@@ -19,19 +19,23 @@ export default function CardWidget ({ items}) {
 			<CardActionArea>
 				<CardMedia 
 					component='img'
-					height = '120'
-					image={items.url}
-					alt='products'
-				 />
+					image={items.img} alt={items.title} 
+				/>				
 				<CardContent>
 					<Typography gutterBottom variant='h5' component='div'>
-						{items.login}
+						name: {items.name}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						{items.id}
+						description: {items.description}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						{items.title}
+						price: {items.price}
+					</Typography>
+					<Typography variant='body2' color='text.secondary'>
+						stock: {items.stock}
+					</Typography>
+					<Typography variant='body2' color='text.secondary'>
+						genre: {items.genre}
 					</Typography>
 				</CardContent>
 			</CardActionArea>
