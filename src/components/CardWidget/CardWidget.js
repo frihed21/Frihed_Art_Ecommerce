@@ -3,42 +3,33 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import CartContext from '../../Context/UseContext';
+// import { CardActionArea } from '@mui/material';
+// import CartContext from '../../Context/UseContext';
 
-export default function CardWidget ({items}) {
-	const {items} = React.useContext(CartContext)
-	let itemsInCart = 0;
-
-	items.map((item) => {
-		itemsInCart = itemsInCart + item.qty;
-	})
-	
+const CardWidget = ({productsData}) => {
+		
 	return (
-		<Card sx={{ maxWidth: 245, margin: 10  }}>
-			<CardActionArea>
-				<CardMedia 
-					component='img'
-					image={items.img} alt={items.title} 
-				/>				
+		<Card sx={{  margin: 10  }}>			
+				<CardMedia component='img' image={productsData.img} alt='frihed art'/>				
 				<CardContent>
 					<Typography gutterBottom variant='h5' component='div'>
-						name: {items.name}
+						{productsData.name}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						description: {items.description}
+						Description: {productsData.description}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						price: {items.price}
+						Genre: {productsData.genre}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						stock: {items.stock}
+						Price: {productsData.price}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						genre: {items.genre}
-					</Typography>
-				</CardContent>
-			</CardActionArea>
+						Stock: {productsData.stock}
+					</Typography>					
+				</CardContent>			
 		</Card>
 	);
-}
+};
+
+export default CardWidget;

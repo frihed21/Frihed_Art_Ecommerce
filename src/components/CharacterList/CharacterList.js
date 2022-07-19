@@ -1,33 +1,57 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import CardWidget from '../CardWidget/CardWidget';
-import './CharacterList.css';
-
-//LINK ROUTER DOM
-
 import { Link } from 'react-router-dom';
+import './CharacterList.css';
+import Spinner from '../Spinner/Spinner';
+
+// FIREBASE - FIRESTORE
+import { collection, query, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase/firebaseConfig';
+
 
 const CharacterList = () => {
-	const [characters, setCharacters] = useState([]);
+	const [productsData, setProductsData] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+
+	console.log(productsData);
 
 	useEffect(() => {
-		axios('https://breakingbadapi.com/api/characters').then((res) =>
-			setCharacters(res.data)
-		);
+		const getProducts = async () => {
+			const p = query(collection(db, 'arte'));
+			const docs = [];
+			const querySnapshot = await getDocs(p);
+			
+			querySnapshot.forEach((doc) => {
+				
+				docs.push({ ...doc.data(), id: doc.id });
+			});
+			
+			setProductsData(docs);
+		};
+		getProducts();
+		setTimeout(() => {
+			setIsLoading(false);
+		}, 1000);
 	}, []);
 
 	return (
-		<div className='CharacterList-container'>
-			{characters.map((char) => {
-				return (
-					<div key={char.char_id}>
-						<Link to={`/detail/${char.char_id}`}>
-							<CardWidget data={char} />
-						</Link>
-					</div>
-				);
-			})}
-		</div>
+		<>
+			{isLoading ? (
+				<div className='Spinner'>
+					<Spinner />
+				</div>
+			) : (
+				<div className='CardListContainer'>
+					{productsData.map((data) => {
+						return (
+							<Link to={`detail/${data.id}`} key={data.id}>
+								<CardWidget productsData={data} />
+							</Link>
+						);
+					})}
+				</div>
+			)}
+		</>
 	);
 };
 

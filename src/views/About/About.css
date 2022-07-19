@@ -1,0 +1,42 @@
+
+  .main__box{
+    align-items: center;
+  }
+  .main__text{
+    font-size: 2rem; 
+    padding: 15px; 
+    border: #ae905c 1px solid;
+  }
+  .main__h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #ae905c;
+  }
+  .main__p{
+    text-align: center;
+  }
+  .main__image{
+    width: 100%;
+  }
+  .main__flex{
+    display: flex;
+    justify-content: center;
+  }
+  .main__chicken{
+    margin-right: 10px;
+    width: 40px;   
+  }
+  .main__span{
+    position: relative;
+    font-family: 'Shizuru', cursive;   
+  }
+  
+  .main__span span{
+    position: absolute;  
+    right: 0;
+    width:0;
+    background: #fff;
+    border-left: 1px solid #000;
+    animation: maquina 5s infinite alternate steps(29);
+  }

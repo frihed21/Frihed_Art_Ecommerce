@@ -1,14 +1,14 @@
 import React from 'react';
 import './Header.css';
-
+import { Link } from 'react-router-dom';
 import img from '../../assets/logo.svg';
 
-const Header = (props) => {
+const Header = () => {
 	return (
 		<div className='Header'>
-			<img src={img} alt='logo de tienda' />
-			<h1>{props.title}</h1>
-			<h2>{props.subtitle}</h2>
+			<Link to='/'>
+				<img src={img} alt='logo' width='150' />
+			</Link>
 		</div>
 	);
 };
