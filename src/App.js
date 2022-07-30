@@ -15,7 +15,6 @@ import Shop from './views/Shop/Shop';
 import ItemDetail from './views/ItemDetail/ItemDetail';
 import GenreType from './views/GenreType/GenreType';
 
-const title = 'FRIHED ART';
 const App = () => {
 	return (
 		<Router>

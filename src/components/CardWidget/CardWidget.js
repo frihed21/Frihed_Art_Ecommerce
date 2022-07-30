@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 const CardWidget = ({productsData}) => {
 		
 	return (
-		<Card sx={{  margin: 10  }}>			
+		<Card sx={{ maxWidth: 345, margin: 5 }}>		
 				<CardMedia component='img' image={productsData.img} alt='frihed art'/>				
 				<CardContent>
 					<Typography gutterBottom variant='h5' component='div'>
@@ -22,7 +22,7 @@ const CardWidget = ({productsData}) => {
 						Genre: {productsData.genre}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
-						Price: {productsData.price}
+						Price: s/. {productsData.price}
 					</Typography>
 					<Typography variant='body2' color='text.secondary'>
 						Stock: {productsData.stock}

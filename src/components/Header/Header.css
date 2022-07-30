@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Nunito:wght@300;400&family=Great+Vibes&family=Sacramento&family=Source+Sans+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Diplomata+SC&family=Shizuru&family=Nunito:wght@300;400&display=swap");
+
 .Header {
 	display: flex;
 	justify-content: center;
@@ -5,16 +8,39 @@
 	align-items: center;
 	background-color: white;
 	width: 100%;
-	min-height: 30vh;
+	min-height: 20vh;
 	border-bottom: 1px solid #ae905c;
-	border-top: 1px solid #ae905c;; 
-}
-
-.Header h1,
-h2 {
-	color: black;
 }
 
 .Header img {
 	width: 105px;
+}
+
+.header__anchorlogo {
+	text-decoration: none;    
+        align-self: center;
+}
+
+.header__name {
+	padding-left: 20px;
+	font-family: "Sacramento", cursive;
+	font-size: 3.5rem;
+    color: #ae905c;
+    animation-duration: 2s;
+}
+
+.header__h3 {
+	text-decoration: none;
+	padding: 10px;
+	font-size: 1rem;
+	letter-spacing: 0.3rem;
+	color: #ae905c;
+	animation-name: aparecer;
+	animation-duration: 2s;
+}
+
+.header__imagelogo{
+	text-decoration: none;
+	width: 95px;
+	
 }

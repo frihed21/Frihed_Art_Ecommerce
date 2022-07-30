@@ -26,7 +26,7 @@ const ItemDetail = () => {
 
 	useEffect(() => {
 		const getProducts = async () => {
-			const q = query(collection(db, 'music'), where(documentId(), '==', id));
+			const q = query(collection(db, 'frihed'), where(documentId(), '==', id));
 			const docs = [];
 			const querySnapshot = await getDocs(q);
 			// console.log('DATA:', querySnapshot);

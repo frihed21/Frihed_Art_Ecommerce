@@ -12,7 +12,7 @@ const Contact = () => {
 		<div style={styles.containerContact}>
 			<h1>Contact</h1>
 			<p>
-			¿Deseas alguno de los productos o uno personalizado? Déjame tus datos y me contactare contigo a la brevedad
+			¿Deseas alguno de los productos o uno personalizado? Escribenos al siguiente numero y me contactaré contigo a la brevedad
 			Contacto: 51999111234
 			</p>
 		</div>

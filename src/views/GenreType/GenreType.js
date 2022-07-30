@@ -19,7 +19,7 @@ const GenreType = () => {
 
 	useEffect(() => {
 		const getProducts = async () => {
-			const q = query(collection(db, 'arte'), where('genre', '==', genre));
+			const q = query(collection(db, 'frihed'), where('genre', '==', genre));
 			const docs = [];
 			const querySnapshot = await getDocs(q);
 			// console.log('DATA:', querySnapshot);

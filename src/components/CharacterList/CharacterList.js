@@ -17,7 +17,7 @@ const CharacterList = () => {
 
 	useEffect(() => {
 		const getProducts = async () => {
-			const p = query(collection(db, 'arte'));
+			const p = query(collection(db, 'frihed'));
 			const docs = [];
 			const querySnapshot = await getDocs(p);
 			
@@ -41,7 +41,7 @@ const CharacterList = () => {
 					<Spinner />
 				</div>
 			) : (
-				<div className='CardListContainer'>
+				<div className='CharacterListContainer'>
 					{productsData.map((data) => {
 						return (
 							<Link to={`detail/${data.id}`} key={data.id}>

@@ -1,5 +1,4 @@
-
-  .main__box{
+ .main__box{
     align-items: center;
   }
   .main__text{
@@ -10,11 +9,12 @@
   .main__h2{
     text-align: center;
     margin-bottom: 20px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #ae905c;
   }
   .main__p{
     text-align: center;
+    font-size: 1.5rem;
   }
   .main__image{
     width: 100%;
@@ -40,3 +40,12 @@
     border-left: 1px solid #000;
     animation: maquina 5s infinite alternate steps(29);
   }
+
+  .main__image{
+    width: 100%;
+  }
+
+  .main__chicken {
+    margin-right: 10px;
+    width: 40px;
+}

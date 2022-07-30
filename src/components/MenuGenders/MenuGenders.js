@@ -61,7 +61,7 @@ const MenuGenders = () => {
 				</MenuItem>
 				<MenuItem>
 					<Link to='/genre/papeleria' style={styles.link}>
-						Papelería
+						Papeleria
 					</Link>
 				</MenuItem>
 				<MenuItem>
